@@ -1,0 +1,94 @@
+﻿@model Routing.Models.Identity.User
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <fieldset>
+        <legend>User</legend>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.UserName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.UserName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Password)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Password)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Password)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Email)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Email)
+        </div>
+    
+     
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.DiaplayName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.DiaplayName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.LastName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.LastName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.FirstName)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.FirstName)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.IsEnabled)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.IsEnabled)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.EmailActive)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.EmailActive)
+        </div>
+    
+        <div class="display-label">
+             @Html.DisplayNameFor(model => model.Mobile)
+        </div>
+        <div class="display-field">
+            @Html.DisplayFor(model => model.Mobile)
+        </div>
+    </fieldset>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id=Model.ID }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

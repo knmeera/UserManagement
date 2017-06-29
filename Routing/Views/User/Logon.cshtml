@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Logon</title>
+</head>
+<body>
+    <div>
+       <h1> Coetl</h1> 
+        <form action="/User/Logon" method="post" name="Logon">
+       <table>
+           <tr>
+               <td> 
+                   <input name="userName" type="text" /></td>
+           </tr>
+            <tr>
+               <td>
+                   <input name="userPassword" type="password" /></td>
+           </tr>
+           <tr>
+               <td>
+                   <input type="submit" value="Logon" name="btnSubmit" />
+               </td>
+               <td>
+                   <p>Dont you have an account?Register Here  @Html.ActionLink("Register Here", "Register", "User", new { id="123"},null) </p>
+               </td>
+           </tr>
+       </table>
+            </form>
+    </div>
+</body>
+</html>

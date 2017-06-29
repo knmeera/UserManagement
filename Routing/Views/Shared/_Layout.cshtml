@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <style>
+        #header
+        {
+            background-color:red;
+            padding:20px;
+            text-align:center;
+            color:#fff;
+        }
+        #nav ul
+        {
+            margin:0px;
+            padding:0px;
+            list-style-type:none;
+            text-align:center;
+        }
+        #nav ul li
+        {
+            display:inline;
+        }
+            #nav ul li a
+            {
+                text-decoration:none;
+                padding:2px;
+                color:#fff;
+                background-color:#036;
+
+            }
+        #container
+        {
+            min-height:600px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="header">Enquiry Management System </div>
+    <div>
+  @*   @{ 
+        if (Session["Id"] == null || Convert.ToInt64(Session["Id"]) != -1)
+        {
+            return;
+        }
+
+    }*@
+       Welcome @Session["UserName"].ToString()
+      @Html.ActionLink("Logout", "Logout","User")
+    </div>
+        <div id="nav">
+            <ul>
+            <li>@Html.ActionLink("Home", "Index")</li>
+            <li>@Html.ActionLink("About Us", "AboutUs", "Home")</li>
+            <li>@Html.ActionLink("Contact Us", "ContactUS", "Home")</li>
+            <li>@Html.ActionLink("Admin", "Admin", "Home")</li>
+            </ul>
+        </div>
+    
+    <div id="container">
+    @RenderBody()
+        </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

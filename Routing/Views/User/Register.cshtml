@@ -1,0 +1,90 @@
+﻿
+@model Routing.Models.Identity.User
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Register</title>
+</head>
+<body>
+    <div>
+      @*  @Html.TextBox("Pavan",(String)ViewData["Message"])
+       <p style="background-color:red">@ViewData["Message"]</p>*@
+        @using(Html.BeginForm("Register","User",FormMethod.Post))
+        {
+            @Html.ValidationSummary(true)
+              <table>
+           <tr><td>User Name</td>
+               <td> 
+                  @* <input name="userName" type="text" />*@
+
+                   @Html.TextBox("UserName")
+                    @Html.ValidationMessageFor(model => model.UserName)
+               </td>
+           </tr>
+            <tr>
+                <td>Password</td>
+               <td>
+                  @* <input name="userPassword" type="password" />*@
+                    @Html.Password("Password")
+                     @Html.ValidationMessageFor(model => model.Password)
+
+               </td>
+           </tr>
+                  <tr>
+                <td>Confirm Password</td>
+               <td>
+                  @* <input name="userPassword" type="password" />*@
+                    @Html.Password("ConfirmPassword")
+                     @Html.ValidationMessageFor(model => model.Password)
+
+               </td>
+           </tr>
+                 <tr>
+
+                     <td>First Name</td>
+                     <td>@Html.TextBox("FirstName")
+
+                           @Html.ValidationMessageFor(model => model.FirstName)
+                     </td>
+                 </tr>
+                  <tr>
+                      <td>Last Name</td>
+                      <td>@Html.TextBox("LastName")
+                            @Html.ValidationMessageFor(model => model.LastName)
+                      </td>
+                  </tr>
+                   <tr>
+                        <td>Email</td>
+               <td>
+               @*    <input name="Email" type="text" />*@
+                   @Html.TextBox("Email")
+                     @Html.ValidationMessageFor(model => model.Email)
+               </td>
+           </tr>
+                   <tr>
+                        <td>Mobile</td>
+               <td>
+                  @* <input name="Mobile" type="text" />*@
+                   @Html.TextBox("Mobile")
+                     @Html.ValidationMessageFor(model => model.Mobile)
+               </td>
+           </tr>
+           <tr>
+               <td>
+                   <input type="submit" value="Submit" name="btnSubmit" />
+
+               </td>
+               <td>@Html.ActionLink("Back To Login","Logon","User")</td>
+           </tr>
+       </table>
+      
+        }
+    </div>
+</body>
+</html>
