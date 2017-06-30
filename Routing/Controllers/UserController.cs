@@ -18,6 +18,7 @@ namespace Routing.Controllers
         {
             return View();
         }
+        //THIS IS POST METHOD
         [HttpPost]
         public ActionResult Logon(FormCollection f)
         {
