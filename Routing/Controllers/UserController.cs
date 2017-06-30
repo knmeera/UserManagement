@@ -76,6 +76,10 @@ namespace Routing.Controllers
             return View();
         }
 
+        public ActionResult TestGIT()
+        {
+            return View();
+        }
         public ActionResult Details(int id)
         {
             User user = _userRepository.GetAll().Single(x => x.ID == id);
