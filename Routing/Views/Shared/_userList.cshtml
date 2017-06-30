@@ -1,4 +1,4 @@
-﻿@model IEnumerable<IdentityConsoleApplication.Identity.User>
+﻿@model IEnumerable<Routing.Models.Identity.User>
 
 @{
     Layout = null;
@@ -19,10 +19,7 @@
             <th>
                 @Html.DisplayNameFor(model => model.Email)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Role)
-            </th>
-            <th>
+             <th>
                 @Html.DisplayNameFor(model => model.DiaplayName)
             </th>
             <th>
@@ -54,9 +51,7 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Email)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Role)
-            </td>
+ 
             <td>
                 @Html.DisplayFor(modelItem => item.DiaplayName)
             </td>

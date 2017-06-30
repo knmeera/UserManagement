@@ -55,9 +55,9 @@ namespace IdentityConsoleApplication.Identity
             {
                 using (var _dbContext = new IdentityManagementEntities())
                 {
-                    //_dbContext.Users.Attach(user);
+                    _dbContext.Users.Add(user);
                     //_dbContext.Entry(user).State = System.Data.EntityState.Added;
-                    //_dbContext.SaveChanges();
+                    _dbContext.SaveChanges();
                 }
             }
             catch (Exception ex)
