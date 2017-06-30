@@ -25,8 +25,7 @@ namespace Routing.Controllers
                 var uname = f["userName"];
                 var psw = f["userPassword"];
                 long Id = _userRepository.Login(uname, psw);
-
-             
+                 
 
             if (Id != -1)
             {
@@ -77,6 +76,10 @@ namespace Routing.Controllers
             return View();
         }
 
+        public ActionResult TestGIT()
+        {
+            return View();
+        }
         public ActionResult Details(int id)
         {
             User user = _userRepository.GetAll().Single(x => x.ID == id);
