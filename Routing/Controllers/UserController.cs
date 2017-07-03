@@ -57,20 +57,14 @@ namespace Routing.Controllers
 
         }
         [HttpPost]
-        public ActionResult Register(FormCollection formValues,User usr)
+        public ActionResult Register(User usr)
         {
             if (IsValidateForm(usr))
             {
-                User user = new User();
-                user.UserName = formValues["userName"];
-                user.Password = formValues["userPassword"];
-                user.Email = formValues["Email"];
-                user.FirstName = formValues["firstName"];
-                user.LastName = formValues["lastName"];
-                user.Mobile = formValues["Mobile"];
-                user.IsEnabled = false;
-                user.EmailActive = false;
-                _userRepository.Add(user);
+                usr.EmailActive = true;
+                usr.IsEnabled = true;
+
+                _userRepository.Add(usr);
                 return RedirectToAction("Logon", "User");
             }
             return View();
@@ -137,7 +131,7 @@ namespace Routing.Controllers
             {
                 ModelState.AddModelError("FirstName", "Please enter FirstName");
             }
-            if (user.Password == string.Empty || user.Password == null)
+            if (user.Password == string.    Empty || user.Password == null)
             {
                 ModelState.AddModelError("Password", "Please enter Password");
             }
